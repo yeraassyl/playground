@@ -25,3 +25,8 @@ jobs:
     - name: Update Kubernetes manifests
       run: |
         sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}|" manifests/deployment.yaml
+        git config --global user.name 'CI Bot'
+        git config --global user.email 'ci@example.com'
+        git add manifests/deployment.yaml
+        git commit -m "Update image to ${{ github.sha }}"
+        git push
