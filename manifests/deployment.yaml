@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: myapp-container
-          image: yeraassyl/myapp:37b94cdbbbe77db3d87d56d18a209800d8e3e232
+          image: yeraassyl/myapp:48af0ba15ed11ec404fe720ac00b4569e7dd846a
           ports:
             - containerPort: 8080
